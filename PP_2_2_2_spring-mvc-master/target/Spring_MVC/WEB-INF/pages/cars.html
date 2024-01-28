@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> A car for pumping </title>
+</head>
+
+<body>
+<h1>Cars:</h1>
+<table style="border: 1px solid rgb(0, 0, 0);">
+    <thead>
+    <tr>
+        <th style="border: 1px solid rgb(0, 0, 0);">Model</th>
+        <th style="border: 1px solid rgb(0, 0, 0);">State number</th>
+        <th style="border: 1px solid rgb(0, 0, 0);">Reg. Certificate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${all}">
+        <td th:utext="${car.model}" style="border: 1px solid rgb(0, 0, 0);"></td>
+        <td th:utext="${car.stateNum}" style="border: 1px solid rgb(0, 0, 0);"></td>
+        <td th:utext="${car.vehRegCertificate}" style="border: 1px solid rgb(0, 0, 0);"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
